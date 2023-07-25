@@ -5,7 +5,7 @@
       <div class="product" *ngFor="let product of products">
         <div class="product-card">
           <div class="product-image">
-            <img [src]="'http://localhost:3000' + product.path" alt="Product Image">
+            <img [src]="'https://backend-uas-psi.vercel.app' + product.path" alt="Product Image">
           </div>
           <div class="product-details">
             <h3>{{ product.name }}</h3>

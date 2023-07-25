@@ -5,7 +5,7 @@ import { HttpClient } from '@angular/common/http';
   providedIn: 'root',
 })
 export class AuthService {
-  private apiUrl = 'http://localhost:3000'; // Replace with your API endpoint
+  private apiUrl = 'https://backend-uas-psi.vercel.app'; // Replace with your API endpoint
   private isLoggedIn = false;
 
   constructor(private http: HttpClient) {}

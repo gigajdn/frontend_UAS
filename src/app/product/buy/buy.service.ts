@@ -6,7 +6,7 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class BuyService {
-  private apiUrl = 'http://localhost:3000/api/products';
+  private apiUrl = 'https://backend-uas-psi.vercel.app/api/products';
 
   constructor(private http: HttpClient) {}
 

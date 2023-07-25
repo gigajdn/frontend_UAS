@@ -1,0 +1,40 @@
+<app-top-admin></app-top-admin>
+<div class="product-list-container">
+    <h2>Product List</h2>
+    <div class="product-list">
+      <div class="product" *ngFor="let product of products">
+        <div class="product-card">
+          <div class="product-image">
+            <img [src]="'http://localhost:3000' + product.path" alt="Product Image">
+          </div>
+          <div class="product-details">
+            <h3>{{ product.name }}</h3>
+            <p>Stok Produk: {{ product.quantity | number }}</p>
+            <p>Harga: {{ product.price | rupiah }}</p>
+            <div *ngIf="id !== product._id" class="button-group">
+              <button class="edit-button" (click)="editProduct(product)">Edit</button>
+              <button class="delete-button" (click)="deleteProduct(product)">Delete</button>
+            </div>
+            <div *ngIf="id === product._id" class="edit-fields">
+              <label for="name">Nama:</label>
+              <input type="text" id="name" [(ngModel)]="product.name">
+              <label for="quantity">Stok Produk:</label>
+              <input type="text" onkeypress='return event.charCode >= 48 && event.charCode <= 57' id="quantity"
+                [(ngModel)]="product.quantity">
+              <label for="price">Harga(Rp):</label>
+              <input type="text" onkeypress='return event.charCode >= 48 && event.charCode <= 57' id="price"
+                [(ngModel)]="product.price">
+              <div class="button-group">
+                <button class="save-button" (click)="saveProduct(product)">Save</button>
+                <button class="cancel-button" (click)="cancelEdit()">Cancel</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div *ngIf="products.length === 0" class="no-products">
+        No products found.
+      </div>
+    </div>
+  </div>
+  

@@ -1,0 +1,73 @@
+// Muted Color Palette
+$color-primary: #2db4f3; // Primary color
+$color-secondary: #ffffff; // Secondary color
+$color-bg: #058ee9; // Background color
+$color-link: #ffffff; // Link color
+$color-dropdown-bg: #93cce2; // Dropdown background color
+
+.navbar {  
+  padding: 10px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: stretch;
+  backdrop-filter: blur(10px);
+
+  .navbar-link {
+    text-decoration: none;
+    color: $color-link;
+    margin-right: 10px;
+
+    &-active {
+      color: $color-primary;
+    }
+  }
+
+  .navbar-item {
+    margin-right: 20px;
+  }
+
+  .navbar-links {
+    display: flex;
+
+    .navbar-link {
+      margin-right: 10px;
+    }
+  }
+
+  .navbar-dropdown {
+    position: relative;
+    display: inline-block;
+
+    .navbar-dropdown-btn {
+      background-color: transparent;
+      border: none;
+      cursor: pointer;
+      color: $color-link;
+    }
+
+    .navbar-dropdown-content {
+      display: none;
+      position: absolute;
+      top: 100%;
+      right: 0;
+      background-color: $color-dropdown-bg;
+      min-width: 120px;
+      box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+      z-index: 1;
+
+      a {
+        color: $color-link;
+        padding: 8px 12px;
+        display: block;
+        text-decoration: none;
+      }
+    }
+
+    &:hover {
+      .navbar-dropdown-content {
+        display: block;
+      }
+    }
+  }
+}

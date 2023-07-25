@@ -1,0 +1,114 @@
+// Define green color palette
+$primary-color: #ffffff;
+$secondary-color: #8BC34A;
+$background-color: #F1F8E9;
+$text-color: #ffffff;
+
+// Styles for the product list container
+.product-list-container {
+  text-align: center;
+}
+
+// Styles for the product list
+.product-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+// Styles for the product card
+.product-card {
+  width: 300px;  
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  border-radius: 8px;
+  margin: 10px;
+  padding: 20px;
+  backdrop-filter: blur(10px);
+}
+
+// Styles for the product image
+.product-image {
+  text-align: center;
+}
+
+.product-image img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 4px;
+}
+
+// Styles for the product details
+.product-details {
+  margin-top: 20px;
+}
+
+h3 {
+  color: $primary-color;
+}
+
+h2 {
+  color: $primary-color;
+}
+
+p {
+  color: $text-color;
+}
+
+// Styles for the edit fields
+.edit-fields {
+  margin-top: 20px;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+  color: $primary-color;
+}
+
+input[type="text"] {
+  width: 100%;
+  padding: 5px;
+  border-radius: 4px;  
+  font-size: medium;
+  color: #000;
+}
+
+.button-group {
+  margin-top: 10px;
+  text-align: right;
+}
+
+button {
+  padding: 8px 16px;
+  margin-left: 5px;
+  border-radius: 4px;
+  cursor: pointer;
+  background-color: #2e8730;
+  color: #ffffff;
+}
+
+.edit-button {
+  background-color: #2e8730;
+  color: white;
+}
+
+.delete-button {
+  background-color: #ad2121;
+  color: white;
+}
+
+.save-button {
+  background-color: #2e8730;
+  color: white;
+}
+
+.cancel-button {
+  background-color: #ad2121;
+  color: white;
+}
+
+// Styles for the no products message
+.no-products {
+  color: $text-color;
+  margin-top: 20px;
+}

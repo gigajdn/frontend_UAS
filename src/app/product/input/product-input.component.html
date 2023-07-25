@@ -1,0 +1,57 @@
+<app-top-admin></app-top-admin>
+<div class="product-form-container">
+  <div class="card">
+    <h2>Tambah Product</h2>
+    <form (ngSubmit)="onSubmit()">
+      <div class="form-group">
+        <label for="name">Nama Produk:</label>
+        <input
+          type="text"
+          id="name"
+          [(ngModel)]="product.name"
+          name="name"
+          required
+        />
+        <div *ngIf="!product.name" class="error-message">
+          Nama Produk is required
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="quantity">Stok Produk:</label>
+        <input
+          type="text"
+          id="quantity"
+          [(ngModel)]="product.quantity"
+          name="quantity"
+          required
+        />
+      </div>
+      <div class="form-group">
+        <label for="price">Harga Produk (Rp):</label>
+        <input
+          type="text"
+          id="price"
+          [(ngModel)]="product.price"
+          name="price"
+          required
+        />
+      </div>
+      <div class="form-group">
+        <label for="image">Product Image:</label>
+        <input
+          type="file"
+          id="image"
+          accept="image/*"
+          name="productImage"
+          (change)="onImageChange($event)"
+        />
+      </div>
+      <div *ngIf="!product.image" class="error-message">
+        Product Image is required
+      </div>
+      <button type="submit" [disabled]="!product.image || !product.name">
+        Add
+      </button>
+    </form>
+  </div>
+</div>

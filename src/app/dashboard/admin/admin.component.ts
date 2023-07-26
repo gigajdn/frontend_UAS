@@ -14,6 +14,5 @@ export class AdminComponent implements OnInit {
 
   ngOnInit() {
     this.authService.authAdmin();
-    this.name = this
   } 
 }

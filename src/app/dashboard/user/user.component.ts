@@ -14,5 +14,6 @@ export class UserComponent implements OnInit {
 
   ngOnInit() {
     this.authService.authUser();
+    this.name=localStorage.getItem('role');
   }
 }
